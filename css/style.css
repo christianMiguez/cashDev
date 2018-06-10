@@ -1,0 +1,54 @@
+.form-inline.eligeCuotas .form-control { width: 200px; }
+#header > div > div.col-xs-6.text-right > ul > li.pull-left.cashOnline { padding-left:0; padding-right:0;} 
+#form-container {margin-top: 40px; margin-bottom: 40px;}
+#form-container label {    font-size: 15px;  font-weight: 600;  color: #37383a; float:left }
+#form-container .form-group { margin-bottom: 26px;}
+#form-container .col-label { text-align: right; padding-top: 6px; }
+.cashOnline {padding-top: 6px;}
+.cashOnline img { width: 45px; }
+
+h1 {color: #009032;	font-size: 24px;text-align: center;}
+h2 {color: #555;font-size: 20px;text-align: center;	margin: 0 0 16px 0;}
+h3 {color: #555;font-size: 15px;text-align: center;	font-weight: normal;margin: 2px 0 6px 0;}
+.buttons {margin-bottom: 10px;	text-align: center;}
+.btn-cancel {background-color: #444;color: white;padding: 8px 12px;	margin-bottom: 10px;}
+.btn-cancel:hover,
+.btn-cancel:active,
+.btn-cancel:focus,
+.btn-cancel:active:focus {color: white;	background-color: #333;}
+.btn-apply {background-color: #009032;border-color: #00802d;color: white;padding: 8px 20px;	margin-bottom: 10px;}
+.btn-apply:hover,
+.btn-apply:active,
+.btn-apply:focus,
+.btn-apply:active:focus {background-color: #43A047;	border-color: #388E3C;color: white;}
+#specs {border: 1px solid #CCC;	max-width: 400px;margin: 0 auto 30px auto;}
+#specs > div {border-bottom: 1px solid #CCC;padding: 12px 2px;	text-align: center;	color: #666;}
+#specs > div:last-child {border-bottom: none;}
+#footer-container {	margin-top: 30px;}
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; cursor: pointer }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+.help-block { margin-top: 2px; margin-bottom: 5px;	font-size: 11px}
+.help-block.warning {color:#9e0707;	font-weight: bold;}
+@media (min-width: 767px) {
+	#footer-container #credileads-address {float: right;text-align: right;}
+}
+
+@media (max-width: 767px) {
+	h1 {font-size: 20px;}
+	h2 {font-size: 16px;}
+}
+
+@media (max-width:768px){ 
+	 .form-inline.eligeCuotas .form-control { width: 100%; }
+	 #header ul li { list-style: none;  float: left;  padding: 5px;}
+	 #form-container .col-label { text-align: left; padding-top: 0px; }
+	 .col-sm-12 { padding: 0 }
+	 #form-container {margin-top:20px; margin-bottom: 20px;}
+	 #header #links-mobile {padding-top: 20px; }
+	 #header div.col-xs-6 {padding-right: 0px; width: 60%;}
+	 #header div.col-xs-6:last-child {padding-left: 0px; width: 39%; padding-right: 10px;}
+}
