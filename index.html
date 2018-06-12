@@ -16,6 +16,7 @@
 
 	<link rel="stylesheet" href="https://rapidoyfacil-ar.scdn3.secure.raxcdn.com/new/css/funnel.css?ver=2018013143" media="screen" title="no title" charset="utf-8">
 	<link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="css/parsley.css" media="screen" charset="utf-8">
 
 	<link rel="canonical" href="" />
 
@@ -88,16 +89,16 @@
 	<div class="form-group col-sm-12">
 	   
 		<div id="form-container" class="">
-            <form enctype="" action="" method="post" class="form-horizontal" role="form">
+            <form id="pars_form" enctype="" action="" method="post" class="form-horizontal" role="form" data-parsley-validate>
                 
                 <div class="form-group">
                     <div class="col-sm-4 col-label">
                         <label for="lugarDeTrabajo">Lugar de trabajo</label>
                     </div>
                     <div class="col-sm-6">
-                        <input class="form-control" placeholder="Por ejemplo: Empresa SRL" name="lugarDeTrabajo" id="autocomplete"/>
+                        <input class="form-control" placeholder="Por ejemplo: Empresa SRL" name="lugarDeTrabajo" id="autocomplete" data-parsley-required="true"
+                        data-parsley-required-message="Este campo es requerido."/>
                         <span class="help-block">Escribí las primeras tres letras y te presentaremos opciones.</span>
-                        <span id="warning1" class="help-block warning hidden">ESTE DATO ES OBLIGATORIO</span>
                     </div>
                 </div><!--/.form-group -->
 
@@ -106,8 +107,8 @@
                         <label for="telefonoAlternativo">Teléfono Alternativo</label>
                     </div>
                     <div class="col-sm-6">
-                        <input type="number" class="form-control" placeholder="Completá un teléfono opcional para llamarte" name="telefonoAlternativo"/>
-                        <span id="warning1" class="help-block warning hidden">ESTE DATO ES OBLIGATORIO</span>
+                        <input type="tel" class="form-control" placeholder="Completá un teléfono opcional para llamarte" name="telefonoAlternativo" data-parsley-required="true"
+                        data-parsley-required-message="Este campo es requerido."/>
                     </div>
                 </div><!--/.form-group -->
 
@@ -116,8 +117,9 @@
                         <label for="ingresoNominalMensual">Inreso nominal mensual</label>
                     </div>
                     <div class="col-sm-6">
-                        <input type="number" class="form-control" placeholder="Poné tu sueldo total CON descuentos" name="ingresoNominalMensual"/>
-                        <span id="warning2" class="help-block warning">ESTE DATO ES OBLIGATORIO</span>
+                        <input type="number" class="form-control" placeholder="Poné tu sueldo total CON descuentos" name="ingresoNominalMensual" data-parsley-required-message="Este campo es requerido."
+                        data-parsley-type="integer"
+                        data-parsley-type-message="Por favor, introducir sólo números." />
                     </div>
                 </div><!--/.form-group -->
 
@@ -126,10 +128,12 @@
                         <label for="ingresoLiquidoMensual">Inreso líquido mensual</label>
                     </div>
                     <div class="col-sm-6">
-                        <input type="number" class="form-control" placeholder="Poné tu sueldo total SIN descuentos" name="ingresoLiquidoMensual"/>
-                        <span id="warning3" class="help-block warning hidden">ESTE DATO ES OBLIGATORIO</span>
+                        <input type="number" class="form-control" placeholder="Poné tu sueldo total SIN descuentos" name="ingresoLiquidoMensual" data-parsley-required-message="Este campo es requerido."
+                        data-parsley-type="integer"
+                        data-parsley-type-message="Por favor, introducir sólo números."/>
                     </div>
                 </div><!--/.form-group -->
+            <input type="submit" value="enviar">
 
             </form>
         </div>
@@ -237,8 +241,8 @@
 
 <script src="https://rapidoyfacil-ar.scdn3.secure.raxcdn.com/new/js/solicitar.js?ver=2018013145" type="text/javascript"></script>
 
-<!-- Autocomplete js -->
 <script src="js/jquery.autocomplete.min.js"></script>
+<script src="js/parsley.min.js"></script>
 <script>
 var countries = [
    { value: 'Andorra', data: 'AD' },
@@ -252,6 +256,8 @@ $('#autocomplete').autocomplete({
         //alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
     }
 });	
+
+ $('#pars_form').parsley();
 </script>
 
 <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"6bc1c39adc","applicationID":"21577998","transactionName":"ZwdXZEFXWEJWWkQPDV5NYEJaGVhUQBZHBxteCxtAW0Y=","queueTime":0,"applicationTime":1,"atts":"S0BUEglNS0w=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>

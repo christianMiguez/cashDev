@@ -33,6 +33,7 @@ h3 {color: #555;font-size: 15px;text-align: center;	font-weight: normal;margin: 
 .autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
 .help-block { margin-top: 2px; margin-bottom: 5px;	font-size: 11px}
 .help-block.warning {color:#9e0707;	font-weight: bold;}
+li.parsley-required {color:red}
 @media (min-width: 767px) {
 	#footer-container #credileads-address {float: right;text-align: right;}
 }
